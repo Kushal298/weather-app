@@ -1,0 +1,124 @@
+.weather{
+    place-self: center;
+    width: min(440px, calc(100% - 32px));
+    padding: 34px 28px;
+    border-radius: 16px;
+    background-image: linear-gradient(145deg, #2f4680 0%, #500ae4 60%, #7b2cff 120%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 24px 70px rgba(17, 13, 46, 0.35);
+}
+.search-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.search-bar input{
+    height: 50px;
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 40px ;
+    padding-left: 25px;
+    color: #626262;
+    background: #ebfffc;
+    font-size: 18px;
+}
+.search-bar input:focus{
+    box-shadow: 0 0 0 3px rgba(235, 255, 252, 0.55);
+}
+
+.search-btn{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(235, 255, 252, 0.95);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: transform 120ms ease, background 120ms ease;
+}
+.search-btn:hover{
+    transform: translateY(-1px);
+    background: rgba(235, 255, 252, 1);
+}
+.search-btn:active{
+    transform: translateY(0px);
+}
+.search-btn svg{
+    width: 22px;
+    height: 22px;
+    fill: #2a2a2a;
+}
+
+.error{
+    width: 100%;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    text-align: center;
+}
+.weather-main{
+    text-align: center;
+    margin-top: 22px;
+}
+.weather-emoji{
+    font-size: 96px;
+    line-height: 1;
+    margin: 6px 0 8px;
+}
+.temperature{
+    color: #fff;
+    font-size: 76px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+.location{
+    color: #fff;
+    font-size: 34px;
+    font-weight: 500;
+}
+.weather-data{
+    width: 100%;
+    margin-top: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.weather-data .col{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    flex: 1;
+}
+.weather-data .col span{
+    display: block;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.92);
+}
+.weather-data .col svg{
+    width: 26px;
+    height: 26px;
+    flex: 0 0 auto;
+    fill: rgba(255, 255, 255, 0.95);
+}
+
+.metric-value{
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media (max-width: 380px){
+    .weather-data{
+        flex-direction: column;
+    }
+}
